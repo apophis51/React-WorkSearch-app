@@ -32,6 +32,6 @@ export const createApplicationSlice = createSlice({
   },
 });
 
-export const selectApplications = (state) => state.application;
+export const selectApplications = (state) => state.createapplication;
 
 export default createApplicationSlice.reducer;

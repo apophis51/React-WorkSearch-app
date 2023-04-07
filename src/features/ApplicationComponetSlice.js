@@ -1,7 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initialState = [];
+
+const initialState = {
+  value: 0,
+  database: [],
+  status: 'idle',
+};
+//  const initialState = [];
 
 export const fetchApplicationsAsync = createAsyncThunk("fetchinAllApplications", async () => {
   try {
@@ -25,25 +31,29 @@ export const deleteApplicationAsync = createAsyncThunk(
 );
 
 export const applicationsSlice = createSlice({
-  name: "applicationstate",
+  name: "applications",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchApplicationsAsync.fulfilled, (state, action) => {
       // Add user to the state array
-      return action.payload;
+
+      state.database = action.payload;
     })
       .addCase(deleteApplicationAsync.fulfilled, (state, action) => {
         console.log("delete sucessfull..rerendering")
         // let x = action.payload
-        state.value = state.applications
-    });
+        // state.value = state.applications
+        // state.application.filter((application) => application.payload)    });
+        state.value = state.value + 1
+        state.database = state.database
+      })
   },
 });
 
 export const selectApplications = (state) => {
 //   return state.campuses;  //update
-return state.applications
+return state.applications;
 };
 
 export default applicationsSlice.reducer;

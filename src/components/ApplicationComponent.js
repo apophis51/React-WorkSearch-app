@@ -8,37 +8,27 @@ import handleSubmit from "../features/ApplicationComponetSlice"
 import ApplicationCreateForm from "../components/ApplicationCreateForm"//my addition
 import { deleteApplicationAsync, fetchApplicationsAsync, selectApplications} from "../features/ApplicationComponetSlice"
 
-
-
 const AllApplications = () => {
-  const [shouldUpdate, setShouldUpdate] = useState(false); 
   const applications = useSelector(selectApplications);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchApplicationsAsync());
-  }, [dispatch]); //set this back to applications soon
+  }, [applications.value]);
 
   const handleDelete = (e) => {
     dispatch(deleteApplicationAsync(e));
-    setShouldUpdate(true)
   };
-
-  useEffect(() => {
-    if (shouldUpdate) {
-      dispatch(fetchApplicationsAsync());
-      setShouldUpdate(false); // set state back to false
-    }
-  }, [shouldUpdate, dispatch]);
 
   console.log("data recieved on the front", applications)
 
   return (
     <div className='campus-container'>
       <div>
+        <h1>{applications.value}</h1>
       <h2>Your Latest Job Applications</h2>
       {true
-        ? applications.map((dataOutput) => (
+        ? applications.database.map((dataOutput) => (
 
           <div className='campus' >
             <NavLink

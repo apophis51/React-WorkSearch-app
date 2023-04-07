@@ -6,8 +6,6 @@ import { addApplicationAsync, createApplicationSlice, selectApplications } from 
 import { fetchApplicationsAsync } from "../features/ApplicationComponetSlice";///new
 
 const ApplicationCreateForm = () => {
-//   const [name, setCampusName] = useState("");
-//   const [address, setAddress] = useState("");
 const [shouldUpdate, setShouldUpdate] = useState(false);
 
 const [CompanyName, setCompanyName] = useState("");
@@ -27,24 +25,8 @@ const dispatch = useDispatch();
 
 useEffect(() => {
   dispatch(fetchApplicationsAsync());
-}, [dispatch]);
+}, [applications]);
 
-
-useEffect(() => {
-  if (shouldUpdate) {
-    dispatch(fetchApplicationsAsync());
-    setShouldUpdate(false); // set state back to false
-  }
-}, [shouldUpdate, dispatch]);
-
-
-
-//   const handleSubmit = (evt) => {
-//     evt.preventDefault();
-//     dispatch(addCampusAsync({ name, address }));
-//     setAddress("");
-//     setCampusName("");
-//   };
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
