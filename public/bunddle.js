@@ -9665,7 +9665,8 @@ var deleteApplicationAsync = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.cr
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
           _context2.next = 2;
-          return axios__WEBPACK_IMPORTED_MODULE_0___default()["delete"]("http://localhost:3000/api/applications/".concat(id));
+          return axios__WEBPACK_IMPORTED_MODULE_0___default()["delete"]( //  `http://localhost:3000/api/applications/${id}`
+          "/api/applications/".concat(id));
         case 2:
           _yield$axios$delete = _context2.sent;
           data = _yield$axios$delete.data;
