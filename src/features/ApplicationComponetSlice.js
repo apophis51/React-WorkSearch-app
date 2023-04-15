@@ -24,7 +24,8 @@ export const deleteApplicationAsync = createAsyncThunk(
   "Application/deleteApplication",
   async (id) => {
     const { data } = await axios.delete(
-      `http://localhost:3000/api/applications/${id}`
+    //  `http://localhost:3000/api/applications/${id}`
+      `/api/applications/${id}`
     );
     return data;
   }
