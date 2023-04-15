@@ -6,7 +6,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const addApplicationAsync = createAsyncThunk(
   "Application/addApplication",
   async ({ CompanyName, URLofJobPosting, URLofApplication,ResumeSubmitted,MyPitch,Notes,JobTitle,ContactedforInterview }) => {
-    const { data } = await axios.post("http://localhost:3000/api/applications", {
+    //const { data } = await axios.post("http://localhost:3000/api/applications", {
+      const { data } = await axios.post("/api/applications", {
         CompanyName, 
         URLofJobPosting,
          URLofApplication,

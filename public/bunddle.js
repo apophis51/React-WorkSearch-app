@@ -9739,7 +9739,7 @@ var addApplicationAsync = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.creat
         case 0:
           CompanyName = _ref.CompanyName, URLofJobPosting = _ref.URLofJobPosting, URLofApplication = _ref.URLofApplication, ResumeSubmitted = _ref.ResumeSubmitted, MyPitch = _ref.MyPitch, Notes = _ref.Notes, JobTitle = _ref.JobTitle, ContactedforInterview = _ref.ContactedforInterview;
           _context.next = 3;
-          return axios__WEBPACK_IMPORTED_MODULE_0___default().post("http://localhost:3000/api/applications", {
+          return axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/applications", {
             CompanyName: CompanyName,
             URLofJobPosting: URLofJobPosting,
             URLofApplication: URLofApplication,
