@@ -23,20 +23,20 @@ const AllApplications = () => {
   console.log("data recieved on the front", applications)
 
   return (
-    <div className='campus-container'>
+    <div className='campus-container flex'>
       <div>
         <h1>{applications.value}</h1>
       <h2>Your Latest Job Applications</h2>
       {true
         ? applications.database.map((dataOutput) => (
 
-          <div className='campus' >
+          <div className='campus flex gap-10 justify-between' >
             <NavLink
 
               to={`/campuses/${dataOutput.id}`}
               key={`All Campuses: ${dataOutput.id}`}
             >
-              <div className="campus row">
+              <div className="campus   bg-zinc-100">
                 {/* <img src={dataOutput.imageUrl} /> */}
                 <ul>
                 <li>Company Name: {dataOutput.CompanyName}</li>
@@ -47,12 +47,13 @@ const AllApplications = () => {
                 <li>Notes: {dataOutput.Notes}</li>
                 <li>Job Title: {dataOutput.JobTitle}</li>
                 <li>Contacted for Interview?: {dataOutput.ContactedforInterview}</li>
+                <br></br>
                 </ul>
               </div>
                
             </NavLink>
-
-            <button onClick={(e) => handleDelete(dataOutput.id)}>X{console.log(dataOutput.id)}</button>
+            
+            <button className = "bg-red-500 p-2 m-4" onClick={(e) => handleDelete(dataOutput.id)}>x Delete{console.log(dataOutput.id)}</button>
             
           </div>
         ))
