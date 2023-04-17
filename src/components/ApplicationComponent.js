@@ -43,14 +43,15 @@ const AllApplications = () => {
               <div className="campus   bg-zinc-100">
                 {/* <img src={dataOutput.imageUrl} /> */}
                 <ul>
-                <li>Company Name: {dataOutput.CompanyName}</li>
-                <li>  URL of Job:{dataOutput.URLofJobPosting}</li>
-                <li>Url of Submitted Application: {dataOutput.URLofApplication}</li>
-                <li>Resume Submitted: {dataOutput.ResumeSubmitted}</li>
-                <li>My Pitch: {dataOutput.MyPitch}</li>
-                <li>Notes: {dataOutput.Notes}</li>
-                <li>Job Title: {dataOutput.JobTitle}</li>
-                <li>Contacted for Interview?: {dataOutput.ContactedforInterview}</li>
+                <li>Name: {dataOutput.name}</li>
+                <li>Company: {dataOutput.company}</li>
+                <li>Email: {dataOutput.email}</li>
+                <li>Linkedin: {dataOutput.linkedin}</li>
+                <li>Phone: {dataOutput.phone}</li>
+                <li>Skype: {dataOutput.skype}</li>
+                <li>Title: {dataOutput.title}</li>
+                <li>Type: {dataOutput.type}</li>
+                <li>Website: {dataOutput.website}</li>
                 <br></br>
                 </ul>
               </div>
