@@ -24,6 +24,7 @@
     "react-dom": "^18.1.0",
     "react-redux": "^v8.0.1",
     "react-router-dom": "^6.3.0",
+    "request": "^2.88.2",
     "sequelize": "^6.20.0",
     "volleyball": "^1.5.1",
     "webpack": "^5.72.0",

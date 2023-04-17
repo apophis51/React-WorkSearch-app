@@ -4,9 +4,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 // import CampusForm from "../components/CreateCampusForm"
 import handleSubmit from "../features/ApplicationComponetSlice"
+//import lambo from "../../server/api/dominatrix.js"
 
 import ApplicationCreateForm from "../components/ApplicationCreateForm"//my addition
 import { deleteApplicationAsync, fetchApplicationsAsync, selectApplications} from "../features/ApplicationComponetSlice"
+
+
+
 
 const AllApplications = () => {
   const applications = useSelector(selectApplications);
