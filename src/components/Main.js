@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
-import { Navbar, AllCampuses, SingleCampus, ApplicationComponent } from "./";
+import { Navbar, ApplicationComponent } from "./";
 import { Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCampusesAsync } from "../features/campuses/campusesSlice";
-import { addCampusAsync } from "../features/CreateCampusForm/CreateCampusFormSlice";
 import { fetchApplicationsAsync } from "../features/ApplicationComponetSlice.js";
 
 const Main = () => {
