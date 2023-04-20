@@ -25,8 +25,6 @@ const Main = () => {
       <Routes>
         <Route path="/applications" element = {<ApplicationComponent />} />
         {/* <Route path="/applications/:applicationId/*" element={<SingleApplication />} /> */}
-        <Route path="/campuses" element={<AllCampuses />} />
-=        <Route path="/campuses/:campusId/*" element={<SingleCampus />} />
         <Route path="/" element={<ApplicationComponent />} />
       </Routes>
     </div>
