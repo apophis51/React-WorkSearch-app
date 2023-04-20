@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import SearchBar from "../components/SearchComponentBar"//my addition
-import { deleteApplicationAsync, fetchApplicationsAsync, selectApplications} from "../features/ApplicationComponetSlice"
+import {  fetchApplicationsAsync, selectApplications} from "../features/ApplicationComponetSlice"
 
 
 
@@ -14,10 +14,6 @@ const AllApplications = () => {
   useEffect(() => {
     dispatch(fetchApplicationsAsync());
   }, [applications.value]);
-
-  const handleDelete = (e) => {
-    dispatch(deleteApplicationAsync(e));
-  };
 
   console.log("data recieved on the front", applications)
 
