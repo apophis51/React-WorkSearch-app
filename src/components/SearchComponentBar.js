@@ -24,7 +24,6 @@ useEffect(() => {
     evt.preventDefault();
     dispatch(addApplicationAsync({CompanyName}));
     setCompanyName("");
-    setShouldUpdate(true)
 
   };
 

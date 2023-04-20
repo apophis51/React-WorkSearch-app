@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-//import juice from "../../server/dominatrix.js"
 
 
 
@@ -23,6 +22,18 @@ export const fetchApplicationsAsync = createAsyncThunk("fetchinAllApplications",
   }
 });
 
+export const addApplicationAsync = createAsyncThunk(
+  "Application/addApplication",
+  async ({ CompanyName }) => {
+    //const { data } = await axios.post("http://localhost:3000/api/applications", {
+      const { data } = await axios.post("/api/applications", {
+        CompanyName, 
+    });
+    return data;
+  }
+);
+
+
 export const deleteApplicationAsync = createAsyncThunk(
   "Application/deleteApplication",
   async (id) => {
@@ -40,8 +51,6 @@ export const applicationsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchApplicationsAsync.fulfilled, (state, action) => {
-      // Add user to the state array
-
       state.database = action.payload;
     })
       .addCase(deleteApplicationAsync.fulfilled, (state, action) => {
