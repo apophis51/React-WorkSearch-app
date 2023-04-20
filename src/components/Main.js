@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
-import { Navbar, ApplicationComponent } from "./";
+import { ApplicationComponent } from "./";
 import { Routes, Route } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchApplicationsAsync } from "../features/ApplicationComponetSlice.js";
 
 const Main = () => {
-  const dispatch = useDispatch();
 
   // useEffect(() => {
   //   dispatch(fetchStudentsAsync());
@@ -18,8 +15,7 @@ const Main = () => {
     <div id="main">
       <div className="column container">
         <div id="header">
-          <h1>Job Search Pro</h1>
-          <Navbar />
+          <h1>Maverick Shawn Marketing</h1>
         </div>
       </div>
       <Routes>
