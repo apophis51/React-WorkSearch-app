@@ -1,9 +1,6 @@
 const router = require("express").Router();
 const { JobApplications } = require('../db')
 const axios = require('axios')
-//var request = require('request');
-//let fuckstick = lambo()
-//this route is used to display all applications
 
 
 const dummy = [  {

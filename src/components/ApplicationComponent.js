@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
-import ApplicationCreateForm from "../components/ApplicationCreateForm"
 import SearchBar from "../components/SearchComponentBar"//my addition
 import { deleteApplicationAsync, fetchApplicationsAsync, selectApplications} from "../features/ApplicationComponetSlice"
 
@@ -26,17 +25,13 @@ const AllApplications = () => {
     <div className='campus-container flex'>
       <div>
         <h1>{applications.value}</h1>
-      <h2>Your Latest Job Applications</h2>
+      <h2>Search for Contacts</h2>
       <SearchBar />
       {true
         ? applications.database.map((dataOutput) => (
 
           <div className='campus flex gap-10 justify-between' >
-            <NavLink
-
-              to={`/campuses/${dataOutput.id}`}
-              key={`All Campuses: ${dataOutput.id}`}
-            >
+        
               
               <div className="campus   bg-zinc-100">
                 {/* <img src={dataOutput.imageUrl} /> */}
@@ -52,10 +47,7 @@ const AllApplications = () => {
                 <li>Website: {dataOutput.website}</li>
                 <br></br>
                 </ul>
-              </div>
-               
-            </NavLink>
-            
+              </div>            
             
           </div>
         ))
