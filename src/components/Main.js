@@ -5,10 +5,10 @@ import { Routes, Route } from "react-router-dom";
 const Main = () => {
 
   return (
-    <div id="main " className="bg-slate-900 text-white px-30">
-      <div className="column container">
+    <div id="main " className="bg-slate-900 text-white px-30 text-xl px-80">
+      <div className="column container ">
         <div id="header">
-          <h1>Market Contact Pro</h1>
+          <h1 className="text-4xl">Market Contact Pro</h1>
           <Navbar />
         </div>
       </div>

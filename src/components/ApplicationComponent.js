@@ -24,19 +24,19 @@ const AllApplications = () => {
   return (
     <div className='campus-container flex '>
       <div>
-      <h1>Your Latest Marketing Contacts</h1>
+      <h1 className="">Your Latest Marketing Contacts</h1>
       <SearchBar />
       <br></br>
       <br></br>
       {true
         ? applications.database.map((dataOutput) => (
 
-          <div className='flex gap-10 justify-between px-80' >
-            <NavLink
+          <div className='flex gap-10 justify-between ' >
+            {/* <NavLink
 
               to={`/campuses/${dataOutput.id}`}
               key={`All Campuses: ${dataOutput.id}`}
-            >
+            > */}
               
               <div className="campus">
                 <ul>
@@ -53,7 +53,7 @@ const AllApplications = () => {
                 </ul>
               </div>
                
-            </NavLink>
+            {/* </NavLink> */}
             
             
           </div>
