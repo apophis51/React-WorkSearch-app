@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Navbar, ApplicationComponent } from "./";
+import { Navbar, ApplicationComponent, Footer } from "./";
 import { Routes, Route } from "react-router-dom";
 
 const Main = () => {
@@ -16,6 +16,7 @@ const Main = () => {
         <Route path="/applications" element = {<ApplicationComponent />} />
         <Route path="/" element={<ApplicationComponent />} />
       </Routes>
+      < Footer />
     </div>
   );
 };
