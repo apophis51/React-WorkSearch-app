@@ -25,8 +25,10 @@ const AllApplications = () => {
     <div className='campus-container flex'>
       <div>
         <h1>{applications.value}</h1>
-      <h2>Your Latest Job Applications</h2>
+      <h2>Your Latest Marketing Contacts</h2>
       <SearchBar />
+      <br></br>
+      <br></br>
       {true
         ? applications.database.map((dataOutput) => (
 
@@ -62,7 +64,7 @@ const AllApplications = () => {
         </div>
       <div 
       
-      className="campus-form">Testing</div>
+      className="campus-form"></div>
 
 
     </div>
