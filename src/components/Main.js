@@ -5,14 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchApplicationsAsync } from "../features/ApplicationComponetSlice.js";
 
 const Main = () => {
-  const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(fetchStudentsAsync());
-  //   dispatch(fetchCampusesAsync());
-  //   dispatch(addCampusAsync());
-  //   dispatch(fetchApplicationsAsync()); //This is needed to update the store
-  // }, [dispatch]);
 
   return (
     <div id="main">
@@ -24,7 +16,6 @@ const Main = () => {
       </div>
       <Routes>
         <Route path="/applications" element = {<ApplicationComponent />} />
-        {/* <Route path="/applications/:applicationId/*" element={<SingleApplication />} /> */}
         <Route path="/" element={<ApplicationComponent />} />
       </Routes>
     </div>
