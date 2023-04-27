@@ -2,7 +2,8 @@ import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addApplicationAsync,selectApplications } from "../features/ApplicationCreateSlice";
-import { fetchApplicationsAsync } from "../features/ApplicationComponetSlice";
+import { fetchNewSearchTerm } from "../features/ApplicationComponetSlice";
+
 
 const SearchBar = () => {
 
@@ -15,14 +16,14 @@ const applications = useSelector(selectApplications);
 const dispatch = useDispatch();
 
 
-useEffect(() => {
-  dispatch(fetchApplicationsAsync());
-}, [applications]);
+// useEffect(() => {
+//   dispatch(fetchApplicationsAsync());
+// }, [applications]);
 
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    dispatch(addApplicationAsync({CompanyName}));
+    dispatch(fetchNewSearchTerm(CompanyName));
     setCompanyName("");
     setShouldUpdate(true)
 
