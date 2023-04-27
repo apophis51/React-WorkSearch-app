@@ -8720,10 +8720,10 @@ var AllApplications = function AllApplications() {
   };
   console.log("data recieved on the front", applications);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "campus-container flex"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, applications.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Your Latest Marketing Contacts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_SearchComponentBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null),  true ? applications.database.map(function (dataOutput) {
+    className: "campus-container flex "
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Your Latest Marketing Contacts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_SearchComponentBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null),  true ? applications.database.map(function (dataOutput) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "campus flex gap-10 justify-between"
+      className: "flex gap-10 justify-between px-80"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.NavLink, {
       to: "/campuses/".concat(dataOutput.id),
       key: "All Campuses: ".concat(dataOutput.id)
@@ -8759,7 +8759,7 @@ __webpack_require__.r(__webpack_exports__);
 var Main = function Main() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "main ",
-    className: "bg-slate-900 text-white"
+    className: "bg-slate-900 text-white px-30"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "column container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -8847,7 +8847,7 @@ var SearchBar = function SearchBar() {
     onSubmit: handleSubmit
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
     htmlFor: "CompanyName"
-  }, "CompanyName: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  }, "Search: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     className: "text-black",
     type: "text",
     name: "CompanyName",
@@ -8856,6 +8856,7 @@ var SearchBar = function SearchBar() {
       return dispatch(setCompanyName(e.target.value));
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    className: "btn",
     type: "submit"
   }, "Submit"));
 };

@@ -30,14 +30,14 @@ const dispatch = useDispatch();
   return (
     
     <form onSubmit={handleSubmit} >
-    <label htmlFor="CompanyName">CompanyName: </label>
+    <label htmlFor="CompanyName">Search: </label>
     <input className="text-black"
         type="text"
       name="CompanyName"
       value={CompanyName}
       onChange={(e) => dispatch(setCompanyName(e.target.value))}
     />    
-    <button type="submit">Submit</button>
+    <button className="btn" type="submit">Submit</button>
     
   </form>
 );

@@ -22,17 +22,16 @@ const AllApplications = () => {
   console.log("data recieved on the front", applications)
 
   return (
-    <div className='campus-container flex'>
+    <div className='campus-container flex '>
       <div>
-        <h1>{applications.value}</h1>
-      <h2>Your Latest Marketing Contacts</h2>
+      <h1>Your Latest Marketing Contacts</h1>
       <SearchBar />
       <br></br>
       <br></br>
       {true
         ? applications.database.map((dataOutput) => (
 
-          <div className='campus flex gap-10 justify-between' >
+          <div className='flex gap-10 justify-between px-80' >
             <NavLink
 
               to={`/campuses/${dataOutput.id}`}
@@ -40,7 +39,6 @@ const AllApplications = () => {
             >
               
               <div className="campus">
-                {/* <img src={dataOutput.imageUrl} /> */}
                 <ul>
                 <li>Name: {dataOutput.name}</li>
                 <li>Company: {dataOutput.company}</li>
