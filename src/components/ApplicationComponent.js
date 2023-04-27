@@ -37,7 +37,7 @@ const AllApplications = () => {
               key={`All Campuses: ${dataOutput.id}`}
             >
               
-              <div className="campus   bg-zinc-100">
+              <div className="campus">
                 {/* <img src={dataOutput.imageUrl} /> */}
                 <ul>
                 <li>Name: {dataOutput.name}</li>

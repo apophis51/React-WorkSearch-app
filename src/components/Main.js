@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
 import { Navbar, ApplicationComponent } from "./";
 import { Routes, Route } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchApplicationsAsync } from "../features/ApplicationComponetSlice.js";
 
 const Main = () => {
 
   return (
-    <div id="main">
+    <div id="main " className="bg-slate-950 text-white">
       <div className="column container">
         <div id="header">
-          <h1>Job Search Pro</h1>
+          <h1>Market Contact Pro</h1>
           <Navbar />
         </div>
       </div>

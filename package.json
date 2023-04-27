@@ -8,6 +8,7 @@
     "start-dev": "npm run build-watch && npm run start-server",
     "build-watch": "webpack -w ",
     "start-server": "nodemon --watch server -e js,html server/index.js",
+    "tailwind": "npx tailwindcss -i ./src/index.css -o ./public/output.css --watch",
     "seed": "node ./bin/seed.js"
   },
   "keywords": [],
