@@ -25,10 +25,12 @@ const AllApplications = () => {
     <div className='campus-container flex '>
       <div>
       <h1 className="">Your Latest Marketing Contacts</h1>
+      <br></br>
+          <br></br>
       <SearchBar />
       <br></br>
       <br></br>
-      {true
+      {applications.database.length > 0 
         ? applications.database.map((dataOutput) => (
 
           <div className='flex gap-10 justify-between ' >
@@ -58,7 +60,7 @@ const AllApplications = () => {
             
           </div>
         ))
-        : <p>t</p>}
+        : <p>No Contacts Found</p>}
         </div>
       <div 
       
