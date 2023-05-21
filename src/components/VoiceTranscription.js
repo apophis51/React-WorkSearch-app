@@ -5,9 +5,9 @@ import SearchBar from "../components/SearchComponentBar"//my addition
 import { deleteApplicationAsync, fetchApplicationsAsync, selectApplications} from "../features/ApplicationComponetSlice"
 
 
+// the route is localhost:3000/voicetransctipiton
 
-
-const AllApplications = () => {
+const VoiceTranscription = () => {
   const applications = useSelector(selectApplications);
   const dispatch = useDispatch();
 
@@ -24,7 +24,7 @@ const AllApplications = () => {
   return (
     <div className='campus-container flex '>
       <div>
-      <h1 className="">Marketing Contact Pro - Your Latest Marketing Contacts</h1>
+      <h1 className="">VoiceTranscription - by MalcMind</h1>
       <br></br>
           <br></br>
       <SearchBar />
@@ -72,4 +72,4 @@ const AllApplications = () => {
   );
 };
 
-export default AllApplications;
+export default VoiceTranscription;
