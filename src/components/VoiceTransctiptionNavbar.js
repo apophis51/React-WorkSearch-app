@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchNewSearchTerm } from "../features/ApplicationComponetSlice";
 
-
 const SearchBar = () => {
+
+
 
 const [CompanyName, setCompanyName] = useState("");
 
@@ -28,7 +29,7 @@ const dispatch = useDispatch();
   };
 
   return (
-    
+    <div>
     <form className= "flex-1" onSubmit={handleSubmit} >
     {/* <label htmlFor="CompanyName">Search: </label> */}
     <button className="btn" type="submit">Select File</button>
@@ -42,6 +43,8 @@ const dispatch = useDispatch();
     <button className="btn" type="submit">Convert</button>
     
   </form>
+  
+  </div>
 );
 };
 

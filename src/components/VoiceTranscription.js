@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import SearchBar from "../components/VoiceTransctiptionNavbar"//my addition
+import  UploadFile  from "../components/UploadFile"//my addition;
 import { deleteApplicationAsync, fetchApplicationsAsync, selectApplications} from "../features/ApplicationComponetSlice"
 
 
@@ -34,7 +35,8 @@ const VoiceTranscription = () => {
 audio formats. Upload your audio file and click convert to recieve text output. </p>
 <br></br>
 <br></br>
-      <SearchBar />
+      {/* <SearchBar /> */}
+      <UploadFile />
       <br></br>
       <br></br>
               {/* delete */}
