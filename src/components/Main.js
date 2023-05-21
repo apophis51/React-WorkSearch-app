@@ -5,7 +5,9 @@ import { Routes, Route } from "react-router-dom";
 const Main = () => {
 
   return (
-    <div id="main " className="bg-slate-900 text-white px-30 text-xl px-80">
+    // <div id="main " className="bg-slate-900 text-white px-30 text-xl px-80">
+    <div id="main " className="bg-green-950 text-white px-30 text-xl px-80">
+
       <div className="column container ">
         <div id="header">
           <h1 className="text-4xl">MalcMind</h1>
